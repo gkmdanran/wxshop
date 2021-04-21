@@ -1,0 +1,24 @@
+<view class="cates">
+  <searchInput></searchInput>
+  <view class="content">
+    <scroll-view class="left" scroll-y>
+      <view class="menuitem {{currentIndex==index?'activeitem':''}}" wx:for="{{menuList}}" wx:key="item" bindtap="clickMenu"  data-index="{{index}}">
+      {{item}}
+      </view>
+  
+    </scroll-view>
+    <scroll-view class="right" scroll-y scroll-top="{{top}}">
+      <view class="goods_group" wx:for="{{content}}" wx:key="cat_name" wx:if="{{item.children&&item.children.length>0}}">
+        <view class="goods_title">/<text>{{item.cat_name}}</text>/</view>
+        <view class="goods_list" >
+          <view bindtap="toList" data-cid="{{x.cat_id}}"  class="goods" wx:for="{{item.children}}" wx:for-item="x" wx:for-index="i" wx:key="i">
+            <image src="{{x.cat_icon}}" mode="widthFix"></image>
+            <view>{{x.cat_name}}</view>
+          </view>
+        
+
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

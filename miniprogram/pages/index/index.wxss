@@ -1,0 +1,44 @@
+page {
+  width: 100%;
+  height: 100%;
+}
+.index_swiper swiper{
+  width: 750rpx;
+  height: 340rpx;
+}
+
+.index_swiper swiper image{
+  width: 100%;
+}
+.index_nav {
+  display: flex;
+}
+.index_nav navigator{
+  flex: 1;
+  padding: 20rpx;
+}
+.index_nav navigator{
+  width: 100%;
+}
+.floor_title image{
+  width: 100%;
+  margin: 10rpx auto;
+  margin-top: 50rpx;
+}
+
+.floor_list navigator{
+  float: left;
+  width: 33.3%;
+}
+
+.floor_list navigator:nth-child(n+2) {
+   height: 208rpx;
+   
+}
+.floor_list navigator{
+  padding: 5rpx;
+}
+.floor_list image{
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,13 @@
+<view class="tabs">
+  <view class="tabs_title">
+    <view wx:for="{{tabs}}" wx:key="id" class="title_item {{item.isActive?'active':''}}" bindtap=
+    "clickTabs" data-index="{{index}}">
+      {{item.value}}
+    </view>
+  </view>
+  <view class="tabs_content">
+    <scroll-view scroll-y style="height:100%" bindscrolltolower="toBottom">
+      <slot></slot>
+    </scroll-view> 
+  </view>
+</view>

@@ -1,0 +1,46 @@
+<view class="address">
+  <view class="infos">
+    <view class="user_info">
+      <view>{{address.userName}}</view>
+      <view>{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
+    </view>
+    <view class="user_phone">{{address.telNumber}}</view>
+  </view>
+</view>
+<view class="cart_title">购物车</view>
+<view class="cart_main">
+    <block wx:if="{{carList.length!=0}}">
+      <view class="cart_item" wx:for="{{carList}}" wx:key="goods_id" >
+        <view class="img" data-id="{{item.goods_id}}" bindtap="toDetail">
+          <image mode="widthFix" src="{{item.goods_big_logo}}"></image>
+        </view>
+        <view class="info">
+          <view class="name">{{item.goods_name}}</view>
+          <view class="price">
+            <view class="goods_price">￥{{item.goods_price}}</view>
+            <view class="cart_num ">        
+              <view class="goods_num">x{{item.num}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="kong">
+        <image mode="widthFix" src="https://cdn.pixabay.com/photo/2014/04/02/17/03/shopping-cart-307772_1280.png" ></image>
+        <view>购物车空空如也~</view>
+      </view>
+    </block>
+</view>
+<view class="foot_tool">
+  <view class="total_price">
+    <view class="total">
+      合计:<text>￥{{money}}</text>
+    </view>
+    <view class="inclue">包含运费</view>
+  </view>
+  <view class="pay" bindtap="payMoney">
+    支付（{{total}}）
+  </view>
+
+</view>

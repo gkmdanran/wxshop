@@ -1,0 +1,47 @@
+<view class="goodlist">
+  <searchInput></searchInput>
+  <view class="usertabs">
+    <tabs tabs="{{tabs}}" bindtabsClick="tabsClick" bindtoBottom="toBottom">
+    <block wx:if="{{tabs[0].isActive}}">
+      <view class="first_tab">
+        <view class="goods_item" wx:for="{{goodsList}}" wx:key="goods_id" wx:if="{{item.goods_big_logo&&item.goods_big_logo!=''}}" bindtap="toDetail" data-goodid="{{item.goods_id}}">
+          <view class="goods_img_wrap">
+            <image mode="widthFix" src="{{item.goods_big_logo}}"></image>
+          </view>
+          <view class="goods_info_wrap">
+            <view class="goods_name">{{item.goods_name}}</view>
+            <view class="goods_price">￥{{item.goods_price}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:elif="{{tabs[1].isActive}}">
+       <view class="first_tab">
+        <view class="goods_item" wx:for="{{goodsList}}" wx:key="goods_id" wx:if="{{item.goods_big_logo&&item.goods_big_logo!=''}}" bindtap="toDetail" data-goodid="{{item.goods_id}}">
+          <view class="goods_img_wrap">
+            <image mode="widthFix" src="{{item.goods_big_logo}}"></image>
+          </view>
+          <view class="goods_info_wrap">
+            <view class="goods_name">{{item.goods_name}}</view>
+            <view class="goods_price">￥{{item.goods_price}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:elif="{{tabs[2].isActive}}">
+       <view class="first_tab">
+        <view class="goods_item" wx:for="{{goodsList}}" wx:key="goods_id" wx:if="{{item.goods_big_logo&&item.goods_big_logo!=''}}" bindtap="toDetail" data-goodid="{{item.goods_id}}">
+          <view class="goods_img_wrap">
+            <image mode="widthFix" src="{{item.goods_big_logo}}"></image>
+          </view>
+          <view class="goods_info_wrap">
+            <view class="goods_name">{{item.goods_name}}</view>
+            <view class="goods_price">￥{{item.goods_price}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </tabs>
+  </view>
+  
+</view>

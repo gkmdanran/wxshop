@@ -1,0 +1,3 @@
+<button type="primary" plain open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击授权</button>
+<button bindtap="back">取消</button>
+
